@@ -13,6 +13,7 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
 
 // Svolgimento
 
+
 // chiedo numero chilometri
 
 const nKilo = parseInt (prompt("Inserisci il numero dei chilometri"));
@@ -27,7 +28,7 @@ console.log(nEta);
 
 if (nEta < 18) {
 
-    let  tot = (((nKilo * 0.21).toFixed(2)) * 20) / 100;
+    let  tot = ((((nKilo * 0.21).toFixed(2)) * 20) / 100).toFixed(2);
 
     console.log(tot);
     // comunico il risultato alla mia pagina html
@@ -36,7 +37,7 @@ if (nEta < 18) {
 
 else if (nEta > 65) {
 
-    let  tot = (((nKilo * 0.21).toFixed(2)) * 40) / 100;
+    let  tot = ((((nKilo * 0.21).toFixed(2)) * 40) / 100).toFixed(2);
 
     console.log(tot);
     // comunico il risultato alla mia pagina html
