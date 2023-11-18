@@ -26,30 +26,32 @@ const nEta = parseInt (prompt("Inserisci l'età"));
 
 console.log(nEta);
 
+// caloclo il totale senza "sconto"
+var tot = ((nKilo * 0.21).toFixed(2));
+
 if (nEta < 18) {
 
-    let  tot = ((((nKilo * 0.21).toFixed(2)) * 20) / 100).toFixed(2);
+    // Calcolo il 20% del totale
+    let totS= (( tot * 20) / 100).toFixed(2);
+
+    // Sottraggo il 20 % dal totale
+    tot = tot - totS;
 
     console.log(tot);
-    // comunico il risultato alla mia pagina html
-    document.getElementById("risultato").innerHTML = "Il biglietto costerà: " + tot +"€";
+
 }
 
 else if (nEta > 65) {
 
-    let  tot = ((((nKilo * 0.21).toFixed(2)) * 40) / 100).toFixed(2);
+    // Calcolo il 40% del totale
+    let totS= (( tot * 40) / 100).toFixed(2);
+
+    // Sottraggo il 20 % dal totale
+    tot = tot - totS;
 
     console.log(tot);
-    // comunico il risultato alla mia pagina html
-    document.getElementById("risultato").innerHTML = "Il biglietto costerà: " + tot +"€";
+
 }
 
-else {
-
-    let tot = (nKilo * 0.21).toFixed(2);
-    
-    console.log(tot);
-    // comunico il risultato alla mia pagina html
-    document.getElementById("risultato").innerHTML = "Il biglietto costerà: " + tot +"€";
-}
-
+// comunico il risultato alla mia pagina html
+document.getElementById("risultato").innerHTML = "Il biglietto costerà: " + tot +"€";
