@@ -35,7 +35,7 @@ if (nEta < 18) {
     let totS= (( tot * 20) / 100).toFixed(2);
 
     // Sottraggo il 20 % dal totale
-    tot = tot - totS;
+    tot = (tot - totS).toFixed(2);
 
     console.log(tot);
 
@@ -47,7 +47,7 @@ else if (nEta > 65) {
     let totS= (( tot * 40) / 100).toFixed(2);
 
     // Sottraggo il 40 % dal totale
-    tot = tot - totS;
+    tot = (tot - totS).toFixed(2);
 
     console.log(tot);
 
